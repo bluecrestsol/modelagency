@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Morgan&Preston Models</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="js/jquery-1.11.0.min.js" ></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+
+
+        <style>
+        </style>
+    </head>
+    <body>
+        <div class="landing-soon">
+
+            <img class="soon-logo" src="img/soon/logo.png"/>
+
+            <div class="soon_page_title white_txt">COMING SOON</div>
+            <div class="page_title white_txt">CONTACT US</div>
+
+
+            <form class="contact_form">
+                <div class="row">
+                    <div class="input_holder col-md-6"><input type="text" name="name" placeholder="Name" class="contact_input"><img class="err" src="img/err.png"/><img class="suc" src="img/suc.png"/></div>
+                    <div class="input_holder col-md-6"><input type="text" name="l_name" placeholder="Last Name" class="contact_input"><img class="err" src="img/err.png"/><img class="suc" src="img/suc.png"/></div>
+                    <div class="input_holder col-md-6"><input type="text" name="subject" placeholder="Subject" class="contact_input"><img class="err" src="img/err.png"/><img class="suc" src="img/suc.png"/></div>
+                    <div class="input_holder col-md-6"><input type="email" name="email" placeholder="Email*" class="contact_input"><img class="err" src="img/err.png"/><img class="suc" src="img/suc.png"/></div>
+                </div>
+                <textarea name="msg_txt" placeholder="Message*" class="msg_txt soon-msg"></textarea>
+                <div class="msg_btn_holder"><input data-toggle="modal" data-target="#myModal" type="submit" name="send_btn" value="Send" class="send_btn"></div>
+            </form>
+
+            <div class="phone-holder">
+                <div class="phone_number"><img src="img/soon/phone.png"/> *123 456 789 1011</div>
+            </div>
+
+
+        </div>
+
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+
+                        Thank you for submitting <br/>
+                        your message, we will be in touch shortly. 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(".contact_form").submit(function (e) {
+                e.preventDefault()
+            })
+            
+            $('.contact_input').focusout(function () {
+                if ($(this).val().length >= 3) {
+                    $('.suc', $(this).parent()).fadeIn(500)
+                    $('.err', $(this).parent()).fadeOut(500)
+                }
+                else {
+                    $('.err', $(this).parent()).fadeIn(500)
+                    $('.suc', $(this).parent()).fadeOut(500)
+                }
+            });
+        </script>
+    </body>
+</html>

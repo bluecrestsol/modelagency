@@ -1,0 +1,701 @@
+/* line 1, ../../scss/_header-footer.scss */
+body {
+  background-color: black;
+  font-family: "proxima-regular";
+  padding-top: 105px;
+}
+
+/* line 8, ../../scss/_header-footer.scss */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: black;
+  top: 0;
+  left: 0;
+}
+
+/* line 17, ../../scss/_header-footer.scss */
+.logo {
+  width: 300px;
+}
+
+/* line 21, ../../scss/_header-footer.scss */
+.navbar {
+  border-bottom: 1px solid white;
+}
+
+/* line 24, ../../scss/_header-footer.scss */
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 1rem;
+}
+
+/* line 28, ../../scss/_header-footer.scss */
+.user {
+  font-size: 14px;
+  color: white;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* line 34, ../../scss/_header-footer.scss */
+.user-control {
+  margin: 15px 0;
+}
+
+/* line 37, ../../scss/_header-footer.scss */
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 13px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+/* line 44, ../../scss/_header-footer.scss */
+.avatar:hover img {
+  opacity: 0.5;
+}
+/* line 47, ../../scss/_header-footer.scss */
+.avatar img {
+  width: 100%;
+  height: 100%;
+  margin-top: -6px;
+}
+
+/* line 54, ../../scss/_header-footer.scss */
+.profile-img-holder {
+  width: 150px;
+  height: 150px;
+  border-radius: 90px;
+  border: 1px solid white;
+  margin: 10px auto;
+  text-align: center;
+  padding: 25px 30px;
+}
+/* line 63, ../../scss/_header-footer.scss */
+.profile-img-holder img {
+  width: 100%;
+}
+
+/* line 67, ../../scss/_header-footer.scss */
+.location-date {
+  color: #a2a2a2;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+}
+
+/* line 72, ../../scss/_header-footer.scss */
+.gray-line {
+  height: 1px;
+  background-color: #a2a2a2;
+  margin-top: 21px;
+  margin-bottom: 56px;
+}
+
+/* line 79, ../../scss/_header-footer.scss */
+.big-white-txt {
+  margin-bottom: 53px;
+}
+
+/* line 82, ../../scss/_header-footer.scss */
+.small-subtitle {
+  margin-bottom: 22px;
+}
+
+/* line 85, ../../scss/_header-footer.scss */
+.profile-menu {
+  width: 200px;
+  background-color: #181717;
+  border: 1px solid #a2a2a2;
+  position: absolute;
+  z-index: 100;
+  top: 45px;
+  display: none;
+}
+/* line 94, ../../scss/_header-footer.scss */
+.profile-menu a {
+  color: white !important;
+  display: block;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 102, ../../scss/_header-footer.scss */
+.profile-menu a:hover {
+  background-color: #343434;
+}
+
+/* line 109, ../../scss/_header-footer.scss */
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  top: 80%;
+  background-color: black;
+  border: 1px solid #ec1561;
+}
+/* line 114, ../../scss/_header-footer.scss */
+.navbar-nav .dropdown-menu a {
+  color: white;
+}
+/* line 116, ../../scss/_header-footer.scss */
+.navbar-nav .dropdown-menu a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* line 126, ../../scss/_header-footer.scss */
+.navbar-nav .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* line 132, ../../scss/_header-footer.scss */
+.navbar-toggler {
+  margin: 20px 0;
+  z-index: 100;
+}
+
+/* line 137, ../../scss/_header-footer.scss */
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 12px;
+  color: white;
+  margin-top: 10px;
+}
+
+@font-face {
+  font-family: proxima-extrabold;
+  src: url(../fonts/ProximaNova-Extrabold_0.otf);
+}
+
+@font-face {
+  font-family: proxima-light;
+  src: url(../fonts/ProximaNova-Light_0.otf);
+}
+
+@font-face {
+  font-family: proxima-semibold;
+  src: url(../fonts/ProximaNova-Semibold_0.otf);
+}
+
+@font-face {
+  font-family: proxima-black;
+  src: url(../fonts/proximanova-black.otf);
+}
+
+@font-face {
+  font-family: proxima-bold;
+  src: url(../fonts/proximanova-bold.otf);
+}
+
+@font-face {
+  font-family: proxima-regular;
+  src: url(../fonts/proximanova-regular.otf);
+}
+
+/* line 26, ../../scss/_general.scss */
+input {
+  height: 38px;
+}
+
+/* line 29, ../../scss/_general.scss */
+textarea {
+  min-height: 110px;
+}
+
+/* line 32, ../../scss/_general.scss */
+.no-marg {
+  margin: 0;
+}
+
+/* line 35, ../../scss/_general.scss */
+form {
+  color: white;
+}
+
+/* line 38, ../../scss/_general.scss */
+.form-control.error {
+  border-color: #ec1561 !important;
+}
+
+/* line 41, ../../scss/_general.scss */
+.form-control.valid {
+  border-color: #2bab51 !important;
+}
+
+/* line 44, ../../scss/_general.scss */
+a:focus {
+  color: #17a2b8;
+  text-decoration: none;
+}
+
+/* line 48, ../../scss/_general.scss */
+.transparent {
+  background-color: transparent;
+}
+
+/* line 52, ../../scss/_general.scss */
+.modal {
+  color: white;
+}
+
+/* line 55, ../../scss/_general.scss */
+.modal-footer {
+  border: none;
+}
+
+/* line 59, ../../scss/_general.scss */
+.close-modal {
+  width: 13px;
+}
+
+/* line 62, ../../scss/_general.scss */
+.close {
+  opacity: 1;
+}
+
+/* line 66, ../../scss/_general.scss */
+.popover-title {
+  background-color: black;
+}
+
+/* line 69, ../../scss/_general.scss */
+.edit-img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+/* line 73, ../../scss/_general.scss */
+.trash-img {
+  width: 20px;
+}
+
+/* line 77, ../../scss/_general.scss */
+div.dataTables_wrapper div.dataTables_filter label {
+  color: white;
+}
+
+/* line 80, ../../scss/_general.scss */
+div.dataTables_wrapper div.dataTables_length label {
+  color: white;
+}
+
+/* line 83, ../../scss/_general.scss */
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+  color: #ec1561;
+  top: 12px;
+}
+
+/* line 87, ../../scss/_general.scss */
+table {
+  color: white;
+}
+/* line 89, ../../scss/_general.scss */
+table a {
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+/* line 97, ../../scss/_general.scss */
+.help-block.form-error {
+  color: #ec1561;
+  font-size: 13px;
+}
+
+/* line 101, ../../scss/_general.scss */
+.card {
+  color: white;
+}
+
+/* line 105, ../../scss/_general.scss */
+.soc-icon {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 111, ../../scss/_general.scss */
+.soc-icon img {
+  width: 200%;
+}
+/* line 114, ../../scss/_general.scss */
+.soc-icon:hover img {
+  margin-left: -100%;
+}
+
+/* line 120, ../../scss/_general.scss */
+.check-holder {
+  color: white;
+}
+/* line 122, ../../scss/_general.scss */
+.check-holder div {
+  display: inline-block;
+}
+
+/* line 126, ../../scss/_general.scss */
+.input-holder {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 130, ../../scss/_general.scss */
+input[type='checkbox'] {
+  opacity: 0 !important;
+  float: left;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* line 140, ../../scss/_general.scss */
+input[type='checkbox'] + label {
+  margin: 0;
+  clear: none;
+  float: left;
+  margin: 1px 10px 0 0;
+  /*Left padding makes room for image*/
+  padding: 13px 0 0 13px;
+  /*Make look clickable because they are*/
+  background: url(../img/check.svg) left center no-repeat;
+  background-size: 200%;
+}
+
+/* line 156, ../../scss/_general.scss */
+input[type='checkbox']:checked + label {
+  background-image: url(../img/check.svg);
+  background-position: -13px 0;
+}
+
+/* line 162, ../../scss/_general.scss */
+input[type='radio'] {
+  opacity: 0 !important;
+  float: left;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* line 172, ../../scss/_general.scss */
+input[type='radio'] + label {
+  margin: 0;
+  clear: none;
+  float: left;
+  margin: 1px 10px 0 0;
+  /*Left padding makes room for image*/
+  padding: 13px 0 0 13px;
+  /*Make look clickable because they are*/
+  background: url(../img/radio-btn.png) left center no-repeat;
+  background-size: 200%;
+}
+
+/* line 188, ../../scss/_general.scss */
+input[type='radio']:checked + label {
+  background-image: url(../img/radio-btn.png);
+  background-position: -13px 0;
+}
+
+/* line 195, ../../scss/_general.scss */
+.check-txt {
+  margin-left: 10px;
+}
+
+/* line 199, ../../scss/_general.scss */
+.list-group-item {
+  color: white;
+}
+
+/* line 204, ../../scss/_general.scss */
+.pagination .page-item {
+  margin: 0 3px;
+}
+/* line 206, ../../scss/_general.scss */
+.pagination .page-item .page-link {
+  border-radius: 5px;
+}
+
+/* line 212, ../../scss/_general.scss */
+.dataTables_info {
+  color: white;
+}
+
+/* line 219, ../../scss/_general.scss */
+.dataTables_paginate.paging_simple_numbers .pagination .page-item .page-link {
+  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* line 230, ../../scss/_general.scss */
+.theme-menu {
+  list-style-type: none;
+  padding-left: 0;
+}
+/* line 234, ../../scss/_general.scss */
+.theme-menu li.active a {
+  color: #ec1561;
+}
+/* line 237, ../../scss/_general.scss */
+.theme-menu li a {
+  color: white;
+}
+
+/* line 244, ../../scss/_general.scss */
+.alert-success {
+  background-color: #2bab51;
+  border-color: #2bab51;
+}
+
+/* line 248, ../../scss/_general.scss */
+.alert-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+/* line 252, ../../scss/_general.scss */
+.alert-warning {
+  background-color: #ff9939;
+  border-color: #ff9939;
+}
+
+/* line 256, ../../scss/_general.scss */
+.alert-danger {
+  background-color: #ec1561;
+  border-color: #ec1561;
+}
+
+/* line 261, ../../scss/_general.scss */
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: #ec1561;
+  color: white;
+}
+
+/* line 266, ../../scss/_general.scss */
+.tooltip-inner {
+  border: 1px solid white;
+  display: block;
+}
+
+/* line 271, ../../scss/_general.scss */
+.tooltip.bs-tether-element-attached-right .tooltip-inner::before, .tooltip.tooltip-left .tooltip-inner::before {
+  border-left-color: white;
+}
+
+/* line 274, ../../scss/_general.scss */
+.tooltip.bs-tether-element-attached-top .tooltip-inner::before, .tooltip.tooltip-bottom .tooltip-inner::before {
+  border-bottom-color: white;
+}
+
+/* line 277, ../../scss/_general.scss */
+.tooltip.bs-tether-element-attached-bottom .tooltip-inner::before, .tooltip.tooltip-top .tooltip-inner::before {
+  border-top-color: white;
+}
+
+/* line 280, ../../scss/_general.scss */
+.tooltip.bs-tether-element-attached-left .tooltip-inner::before, .tooltip.tooltip-right .tooltip-inner::before {
+  border-right-color: white;
+}
+
+/* line 284, ../../scss/_general.scss */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  background-image: url(../img/icons/arrow-down.svg) !important;
+  background-repeat: no-repeat;
+  background-position: right 10px top 12px;
+  background-size: 15px;
+}
+/* line 293, ../../scss/_general.scss */
+select option {
+  color: black;
+}
+
+/* line 298, ../../scss/_general.scss */
+.datepicker {
+  background-color: black;
+  border: 1px solid white;
+  padding: 6px 29px;
+  color: white;
+}
+
+/* line 304, ../../scss/_general.scss */
+.datepicker td, .datepicker th {
+  color: #a2a2a2;
+}
+
+/* line 307, ../../scss/_general.scss */
+.datepicker table tr td.new, .datepicker table tr td.old {
+  color: #2a2a2a;
+}
+
+/* line 310, ../../scss/_general.scss */
+.datepicker table tr td.active.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active.disabled:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active:active, .datepicker table tr td.active:hover, .datepicker table tr td.active:hover.active, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active:hover:active, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active[disabled] {
+  background-color: #ec1561;
+  background-image: none;
+}
+
+/* line 314, ../../scss/_general.scss */
+.datepicker table tr td span.active.active, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled.disabled, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled:hover.disabled, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active.disabled:hover:hover, .datepicker table tr td span.active.disabled:hover[disabled], .datepicker table tr td span.active.disabled[disabled], .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active:hover.disabled, .datepicker table tr td span.active:hover:active, .datepicker table tr td span.active:hover:hover, .datepicker table tr td span.active:hover[disabled], .datepicker table tr td span.active[disabled] {
+  background-color: #ec1561;
+  background-image: none;
+}
+
+/* line 318, ../../scss/_general.scss */
+.pagination-sm .page-link {
+  padding: 1px 10px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* line 324, ../../scss/_general.scss */
+select option:hover {
+  background: red;
+}
+
+/* line 328, ../../scss/_general.scss */
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary {
+  background: #2bab51;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+/* line 333, ../../scss/_general.scss */
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default {
+  background-color: #ec1561;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+}
+
+/* line 340, ../../scss/_general.scss */
+
+/* .bootstrap-switch {
+  width: 90px !important;
+  height: 28px !important;
+} */
+
+/* line 345, ../../scss/_general.scss */
+.bootstrap-switch .bootstrap-switch-label {
+  padding: 4px 23px;
+}
+
+/* line 348, ../../scss/_general.scss */
+.form-control:disabled {
+  cursor: text;
+}
+
+/* line 1, ../../scss/_typography.scss */
+p {
+  color: white;
+}
+
+/* line 4, ../../scss/_typography.scss */
+.green-txt {
+  color: #2bab51 !important;
+}
+
+/* line 7, ../../scss/_typography.scss */
+.darkgreen-txt {
+  color: #16672e !important;
+}
+
+/* line 10, ../../scss/_typography.scss */
+.white-txt {
+  color: white !important;
+}
+
+/* line 13, ../../scss/_typography.scss */
+.black-txt {
+  color: black !important;
+}
+
+/* line 16, ../../scss/_typography.scss */
+.blue-txt {
+  color: #2396dd !important;
+}
+
+/* line 19, ../../scss/_typography.scss */
+.pink-txt {
+  color: #ec1561 !important;
+}
+
+/* line 22, ../../scss/_typography.scss */
+.orange-txt {
+  color: #ff9939 !important;
+}
+
+/* line 25, ../../scss/_typography.scss */
+.gray-txt {
+  color: #a2a2a2 !important;
+}
+
+/* line 31, ../../scss/_typography.scss */
+.light-txt {
+  font-family: "proxima-light";
+}
+
+/* line 34, ../../scss/_typography.scss */
+.regular-txt {
+  font-family: "proxima-regular";
+}
+
+/* line 37, ../../scss/_typography.scss */
+.semibold-txt {
+  font-family: "proxima-semibold";
+}
+
+/* line 40, ../../scss/_typography.scss */
+.bold-txt {
+  font-family: "proxima-bold";
+}
+
+/* line 43, ../../scss/_typography.scss */
+.extrabold-txt {
+  font-family: "proxima-extrabold";
+}
+
+/* line 1, ../../scss/_login.scss */
+.login-holder {
+  text-align: center;
+  width: 25%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -12%;
+}
+/* line 11, ../../scss/_login.scss */
+.login-holder form {
+  border: 1px solid white;
+  padding: 20px;
+  text-align: left;
+}
+/* line 16, ../../scss/_login.scss */
+.login-holder label {
+  font-size: 25px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* line 22, ../../scss/_login.scss */
+.login-holder img {
+  width: 300px;
+  margin: 0 0 20px;
+}
+
+/* line 28, ../../scss/_login.scss */
+.hidden-alert {
+  display: none;
+}

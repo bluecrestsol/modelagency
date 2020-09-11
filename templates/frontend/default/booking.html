@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Morgan&Preston Models</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/swiper.min.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="js/jquery-1.11.0.min.js" ></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="header white_header clearfix">
+            <div class="container-fluid">
+                <a href="{{route('index'}}"><img class="logo" src="img/logo_black.svg"></a>
+                <button class="mobile_btn hidden-md-up">
+                    <span class="mobile_line"></span>
+                    <span class="mobile_line"></span>
+                    <span class="mobile_line"></span>
+                    <span class="mobile_line"></span>
+                </button>
+                <nav class="navigation">
+
+                    <img class="mobile_logo hidden-md-up" src="img/logo_black.svg"/>
+
+                    <a href="index.html#home" data-scroll="home" class="home ">Home</a>
+
+<!--                    <a href="index.html#females" data-scroll="females" class="females">Females</a>
+
+                    <a href="index.html#males" data-scroll="males" class="males">Males</a>-->
+
+                    <a href="index.html#models" data-scroll="booking" class="booking active">Our Models</a>
+
+                    <a href="index.html#contact" data-scroll="contact" class="contact">Contact Us</a>
+
+                </nav>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+
+            
+
+            <div class="model_name_big">cara</div>
+
+            <div class="clearfix">
+            <div class="top_img"><img src="img/booking_big.png"/></div>
+            <div class="model_details">
+                <!--<div class="row">-->
+                    <div class="">
+                        <div class="model_info"><span class="bolded"> Heigh </span>: 175 </div>      
+                        <div class="model_info"><span class="bolded"> CM bust </span>: 82</div>	 
+                        <div class="model_info"><span class="bolded"> CM waist </span>: 61</div>	 
+                    </div>
+                    <div class="">
+                        <div class="model_info"><span class="bolded"> CM hips </span>: 90 CM </div>
+                        <div class="model_info"><span class="bolded"> Hair color </span>: BROWN</div>  
+                        <div class="model_info"><span class="bolded"> Eyes color </span>: Green</div> 
+                        <div class="model_info"><span class="bolded"> Shoe size </span>: 39 EU</div> 
+                        <div class="model_info"><span class="bolded"> AVAILABLE </span> NOW</div> 
+                    </div>
+
+                    <div class=" booking_btn_holder">
+                        <button data-toggle="modal" data-target="#bookingModal" class="booking_btn">BOOKING</button>
+                    </div>
+                <!--</div>-->
+            </div>
+            </div>
+            <div class="clearfix">
+                <div class="left_images">
+                    <img src="img/booking1.png"/>
+                    <img src="img/booking1.png"/>
+                    <img src="img/booking1.png"/>
+                    <img src="img/booking1.png"/>
+                </div>
+                <div class="right_images">
+                    <img src="img/booking2.png"/>
+                    <img src="img/booking2.png"/>
+                    <img src="img/booking2.png"/>
+                </div>
+            </div>
+            
+            <a href="index.html#models"><button class="to_models">BACK TO MODELS</button></a>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="img/close.png"/>
+                        </button>
+
+                        <div class="modal_title">BOOKING</div>
+
+                        <form class="booking_modal">
+                            <div class="input_holder"><input type="text" name="name" placeholder="Name" class="booking_input name"/><img class="err" src="img/err.png"/><img class="suc" src="img/suc.png"/></div>
+                            <div class="input_holder"><input type="text" name="mobile" placeholder="Mobile*" class="booking_input subject"/><img class="err" src="img/err.png"/><img class="suc" src="img/suc.png"/></div>
+                            <div class="input_holder"><input type="email" name="email" placeholder="Email*" class="booking_input email"/><img class="err" src="img/err.png"/><img class="suc" src="img/suc.png"/></div>
+                            <div class="error_info">
+                                Wrong email please try again
+                            </div>
+                            <textarea name="booking_txt" placeholder="Details about the Booking*" class="booking_txt"></textarea>
+                            <div class="msg_btn_holder"><input type="submit" name="send_booking" value="Send" class="booking_send"/></div>
+                        </form>
+
+                        <div class="phone"><img src="img/phone.png"/> 123 456 789 1011</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(".mobile_btn").click(function () {
+                if ($(".navigation").css("display") == "none") {
+                    $(".navigation").slideDown(500)
+                }
+                else {
+                    $(".navigation").slideUp(500)
+                }
+
+            })
+
+            $('.booking_input').focusout(function () {
+                if ($(this).val().length >= 3) {
+                    $('.suc', $(this).parent()).fadeIn(500)
+                    $('.err', $(this).parent()).fadeOut(500)
+                }
+                else {
+                    $('.err', $(this).parent()).fadeIn(500)
+                    $('.suc', $(this).parent()).fadeOut(500)
+                }
+            });
+
+            $('.email').focusout(function () {
+                if ($(this).val().length >= 3) {
+                    $('.error_info').slideUp(500)
+                }
+                else {
+                    $('.error_info').slideDown(500)
+                }
+            });
+            
+            
+
+        </script>
+
+    </body>
+</html>

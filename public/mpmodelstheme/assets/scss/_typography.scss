@@ -1,0 +1,45 @@
+p{
+    color: $whiteColor;
+}
+.green-txt{
+    color: $greenColor !important;
+}
+.darkgreen-txt{
+    color: $darkGreenColor !important;
+}
+.white-txt{
+    color: $whiteColor !important;
+}
+.black-txt{
+    color: $blackColor !important;
+}
+.blue-txt{
+    color: $blueColor !important;
+}
+.pink-txt{
+    color: $pinkColor !important;
+}
+.orange-txt{
+    color: $orangeColor !important;
+}
+.gray-txt{
+    color: $grayColor !important;
+}
+
+
+
+.light-txt{
+    font-family: $fontLight;
+}
+.regular-txt{
+    font-family: $fontRegular;
+}
+.semibold-txt{
+    font-family: $fontSemibold;
+}
+.bold-txt{
+    font-family: $fontBold;
+}
+.extrabold-txt{
+    font-family: $fontExtrabold;
+}

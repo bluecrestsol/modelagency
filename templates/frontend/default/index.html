@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Morgan&Preston Models</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/swiper.min.css" />
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="js/jquery-1.11.0.min.js" ></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script>
+
+            $('nav a').on('click', function () {
+
+                var scrollAnchor = $(this).attr('data-scroll'),
+                        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top;
+
+                $('body,html').animate({
+                    scrollTop: scrollPoint
+                }, 500);
+
+                return false;
+
+            })
+
+
+            $(window).scroll(function () {
+                var windscroll = $(window).scrollTop();
+                if (windscroll >= 100) {
+//        $('nav').addClass('fixed');
+                    $('.wrapper section').each(function (i) {
+                        if ($(this).position().top <= windscroll) {
+                            $('nav a.active').removeClass('active');
+                            $('nav a').eq(i).addClass('active');
+                        }
+                    });
+
+                } else {
+
+//        $('nav').removeClass('fixed');
+                    $('nav a.active').removeClass('active');
+                    $('nav a:first').addClass('active');
+                }
+
+            }).scroll();
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="header clearfix">
+            <div class="container-fluid">
+                <a href="{{route('index'}}"><img class="logo" src="img/logo_white.svg"></a>
+                <button class="mobile_btn hidden-md-up">
+                    <span class="mobile_line"></span>
+                    <span class="mobile_line"></span>
+                    <span class="mobile_line"></span>
+                    <span class="mobile_line"></span>
+                </button>
+                <nav class="navigation">
+
+                    <img class="mobile_logo hidden-md-up" src="img/logo_black.svg"/>
+
+                    <a href="#home" data-scroll="home" class="home active">Home</a>
+
+                    <!--                    <a href="#females" data-scroll="females" class="females">Females</a>
+                    
+                                        <a href="#males" data-scroll="males" class="males">Males</a>-->
+
+                    <a href="#models" data-scroll="booking" class="booking">Our Models</a>
+
+                    <a href="#contact" data-scroll="contact" class="contact">Contact Us</a>
+
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+
+            <section id="home" data-anchor="home">
+
+                <div class="about_txt container mCustomScrollbar" data-mcs-theme="default">
+                    <div class="page_title white_txt">ABOUT US</div>
+
+                    We are a young top notch scouting agency working in the media and fashion industry and introducing talent, actors and models from all over the world.
+                    Whether you’re looking for the right model for your video, photo shoot, catwalk or film, we can assist you with a rich catalogue of Thai and international talents for your selection. 
+                    We can arrange castings, carefully handle talents selection and help you chose according to production needs.
+                    – Headhunting can be really easy and fun!
+
+
+                </div>
+
+            </section>
+
+            <!--            <section id="females" data-anchor="females">
+            
+                            <div class="page_title">FEMALES</div>
+            
+                            <ul class="search">
+                                <li class="active_f">ALL</li>
+                                <li>A</li>
+                                <li>B</li>
+                                <li>C</li>
+                                <li>D</li>
+                                <li>E</li>
+                                <li>F</li>
+                                <li>G</li>
+                                <li>H</li>
+                                <li>I</li>
+                                <li>J</li>
+                                <li>K</li>
+                                <li>L</li>
+                                <li>M</li>
+                                <li>N</li>
+                                <li>O</li>
+                                <li>P</li>
+                                <li>Q</li>
+                                <li>R</li>
+                                <li>S</li>
+                                <li>T</li>
+                                <li>U</li>
+                                <li>V</li>
+                                <li>W</li>
+                                <li>X</li>
+                                <li>Y</li>
+                                <li>Z</li>
+                            </ul>
+            
+                            <div class="swiper-container hidden-md-up">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="img/girl1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/girl2.png"/></div>
+                                    <div class="swiper-slide"><img src="img/girl1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/girl2.png"/></div>
+                                    <div class="swiper-slide"><img src="img/girl1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/girl2.png"/></div>
+                                    <div class="swiper-slide"><img src="img/girl1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/girl2.png"/></div>
+                                    <div class="swiper-slide"><img src="img/girl1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/girl2.png"/></div>
+                                </div>
+                                 Add Pagination 
+                                <div class="swiper-pagination"></div>
+                            </div>
+            
+                            <div class="container-fluid ">
+            
+            
+                                <div class="models_holder clearfix hidden-sm-down">
+            
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+            
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+            
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+            
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">EVE</div></div><img src="img/girl2.png"/></div>
+            
+            
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </section>
+            
+                        <section id="males" data-anchor="males">
+            
+                            <div class="page_title white_txt">MALES</div>
+            
+                            <ul class="search white_txt">
+                                <li class="active_f">ALL</li>
+                                <li>A</li>
+                                <li>B</li>
+                                <li>C</li>
+                                <li>D</li>
+                                <li>E</li>
+                                <li>F</li>
+                                <li>G</li>
+                                <li>H</li>
+                                <li>I</li>
+                                <li>J</li>
+                                <li>K</li>
+                                <li>L</li>
+                                <li>M</li>
+                                <li>N</li>
+                                <li>O</li>
+                                <li>P</li>
+                                <li>Q</li>
+                                <li>R</li>
+                                <li>S</li>
+                                <li>T</li>
+                                <li>U</li>
+                                <li>V</li>
+                                <li>W</li>
+                                <li>X</li>
+                                <li>Y</li>
+                                <li>Z</li>
+                            </ul>
+            
+                            <div class="swiper-container hidden-md-up">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="img/man1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/man2.png"/></div>
+                                    <div class="swiper-slide"><img src="img/man1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/man2.png"/></div>
+                                    <div class="swiper-slide"><img src="img/man1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/man2.png"/></div>
+                                    <div class="swiper-slide"><img src="img/man1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/man2.png"/></div>
+                                    <div class="swiper-slide"><img src="img/man1.png"/></div>
+                                    <div class="swiper-slide"><img src="img/man2.png"/></div>
+                                </div>
+                                 Add Pagination 
+                                <div class="swiper-pagination"></div>
+                            </div>
+            
+                            <div class="container-fluid ">
+            
+                                <div class="models_holder clearfix hidden-sm-down">
+            
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+            
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+            
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+            
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man1.png"/></div>
+                                    <div class="model"><div class="name_holder"><div class="model_name">ADAM</div></div><img src="img/man2.png"/></div>
+            
+            
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </section>-->
+
+            <section id="models" data-anchor="booking">
+
+                <div class="page_title">OUR MODELS</div>
+
+                <!--                <ul class="search">
+                                    <li class="active_f">ALL</li>
+                                    <li>A</li>
+                                    <li>B</li>
+                                    <li>C</li>
+                                    <li>D</li>
+                                    <li>E</li>
+                                    <li>F</li>
+                                    <li>G</li>
+                                    <li>H</li>
+                                    <li>I</li>
+                                    <li>J</li>
+                                    <li>K</li>
+                                    <li>L</li>
+                                    <li>M</li>
+                                    <li>N</li>
+                                    <li>O</li>
+                                    <li>P</li>
+                                    <li>Q</li>
+                                    <li>R</li>
+                                    <li>S</li>
+                                    <li>T</li>
+                                    <li>U</li>
+                                    <li>V</li>
+                                    <li>W</li>
+                                    <li>X</li>
+                                    <li>Y</li>
+                                    <li>Z</li>
+                                </ul>-->
+
+                <div class="swiper-container hidden-md-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/girl1.png"/><div class="mobile_info">EVE<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/man1.png"/><div class="mobile_info">ADAM<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/girl2.png"/><div class="mobile_info">EVE<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/man2.png"/><div class="mobile_info">ADAM<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/girl1.png"/><div class="mobile_info">EVE<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/man1.png"/><div class="mobile_info">ADAM<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/girl2.png"/><div class="mobile_info">EVE<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/man2.png"/><div class="mobile_info">ADAM<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/girl1.png"/><div class="mobile_info">EVE<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/man1.png"/><div class="mobile_info">ADAM<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/girl2.png"/><div class="mobile_info">EVE<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                        <div class="swiper-slide"><a href="booking.html"><img src="img/man2.png"/><div class="mobile_info">ADAM<br/>AVAILABLE IN 25 DAYS</div></a></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="container ">
+
+                    <div class=" clearfix hidden-sm-down">
+
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl1.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man1.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl2.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man2.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl1.png"/></div></a>
+
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man1.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl2.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man2.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl1.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man1.png"/></div></a>
+
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl2.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man2.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl1.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man1.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl2.png"/></div></a>
+
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man2.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl1.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man1.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">EVE<div class="available">AVAILABLE IN 25 DAYS</div></div></div><img src="img/girl2.png"/></div></a>
+                        <a href="booking.html"><div class="model"><div class="name_holder"><div class="model_name">ADAM<div class="available">AVAILABLE NOW</div></div></div><img src="img/man2.png"/></div></a>
+
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="contact" data-anchor="contact">
+
+                <div class="page_title white_txt">CONTACT US</div>
+
+                <div class="contact_small_txt">
+                    MORGAN & PRESTON<br/>
+                    MODEL MANAGEMENT GROUP
+                </div>
+
+                <form class="container">
+                    <div class="row">
+                        <div class="col-md-6"><input type="text" name="name" placeholder="Name" class="contact_input"/><img class="v" src="img/v.png"/><img class="x" src="img/x.png"/></div>
+                        <div class="col-md-6"><input type="text" name="l_name" placeholder="Last Name" class="contact_input"/><img class="v" src="img/v.png"/><img class="x" src="img/x.png"/></div>
+                        <div class="col-md-6"><input type="text" name="subject" placeholder="Subject" class="contact_input"/><img class="v" src="img/v.png"/><img class="x" src="img/x.png"/></div>
+                        <div class="col-md-6"><input type="email" name="email" placeholder="Email*" class="contact_input"/><img class="v" src="img/v.png"/><img class="x" src="img/x.png"/></div>
+                    </div>
+                    <textarea name="msg_txt" placeholder="Message*" class="msg_txt"></textarea>
+                    <div class="msg_btn_holder"><input data-toggle="modal" data-target="#myModal" type="submit" name="send_btn" value="Send" class="send_btn"/></div>
+                </form>
+
+                <script>
+                    $('.contact_input').focusout(function () {
+                        if ($(this).val().length >= 3) {
+                            $('.v', $(this).parent()).fadeIn(500)
+                            $('.x', $(this).parent()).fadeOut(500)
+                        } else {
+                            $('.x', $(this).parent()).fadeIn(500)
+                            $('.v', $(this).parent()).fadeOut(500)
+                        }
+                    });
+                </script>
+
+                <div class="map_holder">
+                    <div class="container">
+                        <div class="contact_info">
+                            <img src="img/logo_white.svg"/>
+
+                            Morgan & Preston Co., Ltd<br/>
+                            c/o The Owl Society<br/>
+                            8/1 Sukhumvit 61<br/>
+                            10110 Watthana<br/>
+                            Bangkok, Thailand<br/><br/>
+
+
+                            <!--Tel/Fax (office) : +66 2 712 7001-5 Ext.504<br/><br/>-->
+
+                            Bookers:<br/><br/>
+
+                            Mobile : +66 81 357 5743<br/>
+                            Line ID : alisalisa2<br/><br/>
+
+                            Mobile : +66 90 412 7867<br/>
+                            Line ID : May.w.<br/><br/>
+
+                            <!--Email: info@morgan&prestonmodels.com-->
+
+                        </div>
+                    </div>
+
+
+                    <iframe class="map_frame hidden-sm-down" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9218.57202247415!2d100.57804743163298!3d13.722551928839364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29faf9f978015%3A0x1045ccc8208bdd7f!2s8%2F1+Sukhumvit+Rd%2C+Khwaeng+Khlong+Tan+Nuea%2C+Khet+Watthana%2C+Krung+Thep+Maha+Nakhon+10110%2C+Thailand!5e0!3m2!1sen!2s!4v1505802818616"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+                <!--<img class="map hidden-md-up" src="img/map.png"/>-->
+                <iframe class="map hidden-md-up" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9218.57202247415!2d100.57804743163298!3d13.722551928839364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29faf9f978015%3A0x1045ccc8208bdd7f!2s8%2F1+Sukhumvit+Rd%2C+Khwaeng+Khlong+Tan+Nuea%2C+Khet+Watthana%2C+Krung+Thep+Maha+Nakhon+10110%2C+Thailand!5e0!3m2!1sen!2s!4v1505802818616"  frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+            </section>
+
+            <div class="footer">Copyright 2017 : Morgan & Preston Co., Ltd</div>
+        </div>
+
+
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!--                    <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>-->
+                    <div class="modal-body">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+
+                        Thank you for submitting <br/>
+                        your message, we will be in touch shortly. 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/swiper.min.js"></script>
+
+        <script>
+
+
+                    $(".contact_form").submit(function (e) {
+                        e.preventDefault()
+                    })
+
+
+                    var swiper = new Swiper('.swiper-container', {
+                        pagination: '.swiper-pagination',
+                        slidesPerView: 3,
+                        centeredSlides: true,
+                        paginationClickable: true,
+                        spaceBetween: 10
+                    });
+
+                    $(window).scroll(function () {
+                        if ($(".home").hasClass("active")) {
+                            $(".header").css("background-color", "rgba(0, 0, 0, 0.8)")
+                            if ($(window).width() > 768) {
+                                $("nav a").css("color", "white")
+                            }
+
+                            $(".logo").attr('src', 'img/logo_white.svg');
+                            $("nav a").css("border-bottom", "none")
+                            $("nav a.active").css("border-bottom", "1px solid white")
+                            $(".mobile_line").css("background-color", "white")
+                            $(".mobile_btn").click(function () {
+                                if ($(".navigation").css("display") == "block") {
+                                    $(".mobile_line").css("background-color", "black")
+                                } else {
+                                    $(".mobile_line").css("background-color", "white")
+                                }
+                            })
+                        }
+//                else if ($(".females").hasClass("active")) {
+//                    $(".header").css({
+//                        "background-color": "white",
+////                        "border-bottom": "1px solid black"
+//                    })
+//                    if ($(window).width() > 768) {
+//                        $("nav a").css("color", "black")
+//                    }
+//                    $(".logo").attr('src', 'img/logo_black.svg');
+//                    $("nav a").css("border-bottom", "none")
+//                    $("nav a.active").css("border-bottom", "1px solid black")
+//                    $(".mobile_line").css("background-color", "black")
+//                    $(".mobile_btn").click(function () {
+//                        if ($(".navigation").css("display") == "block") {
+//                            $(".mobile_line").css("background-color", "black")
+//                        } else {
+//                            $(".mobile_line").css("background-color", "black")
+//                        }
+//                    })
+//                }
+//                else if ($(".males").hasClass("active")) {
+//                    $(".header").css({
+//                        "background-color": "black",
+////                        "border-bottom": "1px solid white"
+//                    })
+//                    if ($(window).width() > 768) {
+//                        $("nav a").css("color", "white")
+//                    }
+//                    $(".logo").attr('src', 'img/logo_white.svg');
+//                    $("nav a").css("border-bottom", "none")
+//                    $("nav a.active").css("border-bottom", "1px solid white")
+//                    $(".mobile_line").css("background-color", "white")
+//                    $(".mobile_btn").click(function () {
+//                        if ($(".navigation").css("display") == "block") {
+//                            $(".mobile_line").css("background-color", "black")
+//                        } else {
+//                            $(".mobile_line").css("background-color", "white")
+//                        }
+//                    })
+//                }
+                        else if ($(".booking").hasClass("active")) {
+                            $(".header").css({
+                                "background-color": "white",
+//                        "border-bottom": "1px solid black"
+                            })
+                            if ($(window).width() > 768) {
+                                $("nav a").css("color", "black")
+                            }
+                            $(".logo").attr('src', 'img/logo_black.svg');
+                            $("nav a").css("border-bottom", "none")
+                            $("nav a.active").css("border-bottom", "1px solid black")
+                            $(".mobile_line").css("background-color", "black")
+                            $(".mobile_btn").click(function () {
+                                if ($(".navigation").css("display") == "block") {
+                                    $(".mobile_line").css("background-color", "black")
+                                } else {
+                                    $(".mobile_line").css("background-color", "black")
+                                }
+                            })
+                        } else if ($(".contact").hasClass("active")) {
+                            $(".header").css({
+                                "background-color": "black",
+//                        "border-bottom": "1px solid white"
+                            })
+                            if ($(window).width() > 768) {
+                                $("nav a").css("color", "white")
+                            }
+                            $(".logo").attr('src', 'img/logo_white.svg');
+                            $("nav a").css("border-bottom", "none")
+                            $("nav a.active").css("border-bottom", "1px solid white")
+                            $(".mobile_line").css("background-color", "white")
+                            $(".mobile_btn").click(function () {
+                                if ($(".navigation").css("display") == "block") {
+                                    $(".mobile_line").css("background-color", "black")
+                                } else {
+                                    $(".mobile_line").css("background-color", "white")
+                                    alert("zatvoreno")
+                                }
+                            })
+                        }
+                    })
+
+                    $(".mobile_btn").click(function () {
+                        if ($(".navigation").css("display") == "none") {
+                            $(".navigation").slideDown(500)
+                        } else {
+                            $(".navigation").slideUp(500)
+                        }
+
+                    })
+
+                    if ($(window).width() < 768) {
+                        $(".navigation a").click(function () {
+                            $(".navigation").slideUp(500)
+                        })
+                    }
+
+                    (function ($) {
+                        $(window).on("load", function () {
+                            $(".content").mCustomScrollbar();
+                        });
+                    })(jQuery);
+
+        </script>
+
+    </body>
+</html>

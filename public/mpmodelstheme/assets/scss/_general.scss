@@ -1,0 +1,350 @@
+@font-face {
+    font-family: proxima-extrabold;
+    src: url(../fonts/ProximaNova-Extrabold_0.otf);
+}
+@font-face {
+    font-family: proxima-light;
+    src: url(../fonts/ProximaNova-Light_0.otf);
+}
+@font-face {
+    font-family: proxima-semibold;
+    src: url(../fonts/ProximaNova-Semibold_0.otf);
+}
+@font-face {
+    font-family: proxima-black;
+    src: url(../fonts/proximanova-black.otf);
+}
+@font-face {
+    font-family: proxima-bold;
+    src: url(../fonts/proximanova-bold.otf);
+}
+@font-face {
+    font-family: proxima-regular;
+    src: url(../fonts/proximanova-regular.otf);
+}
+
+input{
+    height: 38px;
+}
+textarea{
+    min-height: 110px;
+}
+.no-marg{
+    margin: 0;
+}
+form{
+    color: white;
+}
+.form-control.error{
+    border-color: $pinkColor !important;
+}
+.form-control.valid{
+    border-color: $greenColor !important;
+}
+a:focus{
+    color: #17a2b8;
+    text-decoration: none;
+}
+.transparent{
+    background-color: $transparent;
+}
+
+.modal{
+    color: white;
+}
+.modal-footer{
+    border: none;
+}
+
+.close-modal{
+    width: 13px;
+}
+.close{
+    opacity: 1;
+}
+
+.popover-title{
+    background-color: $blackColor;
+}
+.edit-img{
+    width: 20px;
+    margin-right: 5px;
+}
+.trash-img{
+    width: 20px;
+}
+
+div.dataTables_wrapper div.dataTables_filter label{
+    color: white;
+}
+div.dataTables_wrapper div.dataTables_length label{
+    color: white;
+}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after{
+    color: $pinkColor;
+    top: 12px;
+}
+table{
+    color: white;
+    a{
+        margin: 0 2px;
+        cursor: pointer;
+    }
+}
+
+
+
+.help-block.form-error{
+    color: $pinkColor;
+    font-size: 13px;
+}
+.card{
+    color: $whiteColor;
+}
+
+.soc-icon{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    img{
+        width: 200%;
+    }
+    &:hover img{
+        margin-left: -100%;
+    }
+}
+
+
+.check-holder{
+    color: $whiteColor;
+    div{
+        display: inline-block;
+    }
+}
+.input-holder{
+    position: relative;
+    display: inline-block;
+}
+input[type='checkbox']{
+    opacity: 0 !important;
+    float: left;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+input[type='checkbox'] + label {
+
+    margin: 0;
+    clear: none;
+    float: left;
+    margin: 1px 10px 0 0;
+
+    /*Left padding makes room for image*/ 
+    padding: 13px 0 0 13px;
+
+    /*Make look clickable because they are*/ 
+
+
+    background: url(../img/check.svg) left center no-repeat;
+    background-size: 200%;
+}
+input[type='checkbox']:checked + label {
+
+    background-image: url(../img/check.svg);
+    background-position: -13px 0;
+
+}
+input[type='radio']{
+    opacity: 0 !important;
+    float: left;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+input[type='radio'] + label {
+
+    margin: 0;
+    clear: none;
+    float: left;
+    margin: 1px 10px 0 0;
+
+    /*Left padding makes room for image*/ 
+    padding: 13px 0 0 13px;
+
+    /*Make look clickable because they are*/ 
+
+
+    background: url(../img/radio-btn.png) left center no-repeat;
+    background-size: 200%;
+}
+input[type='radio']:checked + label {
+
+    background-image: url(../img/radio-btn.png);
+    background-position: -13px 0;
+
+}
+
+.check-txt{
+    margin-left: 10px;
+}
+
+.list-group-item{
+    color: white;
+}
+
+.pagination{
+    .page-item{
+        margin: 0 3px;
+        .page-link{
+            border-radius: 5px;
+        }
+    }
+}
+
+.dataTables_info{
+    color: white;
+}
+
+.dataTables_paginate.paging_simple_numbers{
+    .pagination{
+        .page-item{
+            .page-link{
+                font-size: 12px;
+                width: 25px;
+                height: 25px;
+                padding: 5px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.theme-menu{
+    list-style-type: none;
+    padding-left: 0;
+    li{
+        &.active a{
+            color: $pinkColor;
+        }
+        a{
+            color: $whiteColor;
+
+        }
+    }
+}
+
+.alert-success{
+    background-color: $greenColor;
+    border-color: $greenColor;
+}
+.alert-info{
+    background-color: $lightBlueColor;
+    border-color: $lightBlueColor;
+}
+.alert-warning{
+    background-color: $orangeColor;
+    border-color: $orangeColor;
+}
+.alert-danger{
+    background-color: $pinkColor;
+    border-color: $pinkColor;
+}
+
+.dropdown-item:focus, .dropdown-item:hover{
+    background-color: $pinkColor;
+    color: $whiteColor;
+}
+
+.tooltip-inner{
+    border: 1px solid $whiteColor;
+    display: block
+}
+
+.tooltip.bs-tether-element-attached-right .tooltip-inner::before, .tooltip.tooltip-left .tooltip-inner::before{
+    border-left-color: $whiteColor;
+}
+.tooltip.bs-tether-element-attached-top .tooltip-inner::before, .tooltip.tooltip-bottom .tooltip-inner::before{
+    border-bottom-color: $whiteColor;
+}
+.tooltip.bs-tether-element-attached-bottom .tooltip-inner::before, .tooltip.tooltip-top .tooltip-inner::before{
+    border-top-color: $whiteColor;
+}
+.tooltip.bs-tether-element-attached-left .tooltip-inner::before, .tooltip.tooltip-right .tooltip-inner::before {
+    border-right-color: $whiteColor;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+
+    background-image: url(../img/icons/arrow-down.svg) !important;
+    background-repeat: no-repeat;
+    background-position: right 10px top 12px;
+    background-size: 15px;
+    option{
+        color: black;
+    }
+}
+
+.datepicker{
+    background-color: $blackColor;
+    border: 1px solid $whiteColor;
+    padding: 6px 29px;
+    color: white;
+}
+.datepicker td, .datepicker th{
+    color: $grayColor;
+}
+.datepicker table tr td.new, .datepicker table tr td.old{
+    color: #2a2a2a;
+}
+.datepicker table tr td.active.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active.disabled:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active:active, .datepicker table tr td.active:hover, .datepicker table tr td.active:hover.active, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active:hover:active, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active[disabled]{
+    background-color: $pinkColor;
+    background-image: none;
+}
+.datepicker table tr td span.active.active, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled.disabled, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled:hover.disabled, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active.disabled:hover:hover, .datepicker table tr td span.active.disabled:hover[disabled], .datepicker table tr td span.active.disabled[disabled], .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active:hover.disabled, .datepicker table tr td span.active:hover:active, .datepicker table tr td span.active:hover:hover, .datepicker table tr td span.active:hover[disabled], .datepicker table tr td span.active[disabled]{
+    background-color: $pinkColor;
+    background-image: none;    
+}
+.pagination-sm .page-link {
+    padding: 1px 10px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+select option:hover {
+    background: red;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary {
+    background: #2bab51;
+    padding: 4px 12px;
+    font-size: 12px;
+}
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default {
+    background-color: #ec1561;
+    color: white;
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+// .bootstrap-switch{
+//     width: 90px !important;
+//     height: 28px !important;
+// }
+
+.bootstrap-switch .bootstrap-switch-label{
+    padding: 4px 23px;
+}
+.form-control:disabled {
+    cursor: text;
+}

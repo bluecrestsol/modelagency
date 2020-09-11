@@ -1,0 +1,30 @@
+.login-holder{
+
+    text-align: center;
+    width: 25%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -12%;
+    form{
+        border: 1px solid $whiteColor;
+        padding: 20px;
+        text-align: left;
+    }
+    label{
+        font-size: 25px;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    img{
+        width: 300px;
+        margin: 0 0 20px;
+    }
+}
+
+.hidden-alert{
+    display: none;
+}
